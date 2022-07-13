@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
+  @ViewChild('name') namekey! :ElementRef;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+proceed(){
+  localStorage.setItem('name', this.namekey.nativeElement.value);
+}
 }

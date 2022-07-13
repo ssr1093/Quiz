@@ -8,7 +8,7 @@
   <form class="row gy-2 gx-2">
  <div class="col-md-5">
       <label class="visually-hidden" for="autoSizingInput">Name</label>
-      <input type="text" class="form-control" id="autoSizingInput" placeholder="Your Name" required="">
+      <input #name type="text" class="form-control" id="autoSizingInput" placeholder="Your Name" required="">
     
 </div>
 <br>
@@ -16,7 +16,7 @@
     <div class="col-md-4">
       <label class="visually-hidden" for="autoSizingInputGroup">Email ID</label>
       <div class="input-group">
-                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Email Id" required>
+                <input #EmailId type="text" class="form-control" id="autoSizingInputGroup" placeholder="Email Id" required>
       </div>
     </div>
     <!-- <div class="col-auto">
@@ -33,7 +33,7 @@
   </form>
   
   <br><div class="col-auto text-center">
-    <button type="submit" class="btn btn-primary btn-1g" routerLink="/quiz">Proceed</button>
+    <button type="submit" class="btn btn-primary btn-1g" routerLink="/quiz" (click)="proceed()">Proceed</button>
   </div>
 </div>
 
