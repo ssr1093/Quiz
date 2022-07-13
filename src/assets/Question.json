@@ -161,5 +161,22 @@
             ],
             "explanation": "this.propertyName is the way to access a specific property within a class"
         }
+        {
+            "questionText":"RxJS can be used for?",
+            "options":[{
+                "text":"Browser"
+            }
+            {
+                "text":"Server Side"
+            }
+            {
+                "text":"Both",
+                "correct":true
+            }
+            {
+                "text":"None of the Above"
+            }
+        ]
+        }
     ]
 }

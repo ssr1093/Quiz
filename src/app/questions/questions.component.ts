@@ -17,7 +17,7 @@ export class QuestionsComponent implements OnInit {
   correctAnswer:number =0;
   incorrectAnswer:number=0;
   interval$:any;
-  progress:string='0';
+  progress:string="0";
   constructor(private quizservice : QuizService) { }
 
   ngOnInit(): void {
@@ -81,7 +81,7 @@ resetQuiz(){
   this.progress="0";
 }
 getProgresspercent(){
-  this.progress=((this.currentQuestion/this.questionList.lenght)*100).toString();
+  this.progress=((this.currentQuestion/this.questionList.length)*100).toString();
   return this.progress;
 }
 }
