@@ -81,7 +81,7 @@ resetQuiz(){
   this.progress="0";
 }
 getProgresspercent(){
-  this.progress=((this.currentQuestion/this.questionList.length)*100).toString();
+  this.progress=((this.currentQuestion/this.questionList.length )*100).toString();
   return this.progress;
 }
 }
