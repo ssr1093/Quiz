@@ -1,9 +1,9 @@
 <div class="container mt-2">
     <div class="card">
-       <ng-container>
+       <ng-container *ngIf="!isQuizcompleted">
         <div class="d-flex justify-content-between p-1">
-            <div class="image">
-                <img src="logo.png" alt="">
+            <div class="img-fluid">
+                <img style="width: 50px;height: 50px;" src="assets/Logo.png" alt="">
             </div>
             <div class="quiz-header">
                 <h5 style="font-family: cursive;">Welcome {{name}}</h5>
@@ -44,9 +44,15 @@
                 <button [disabled]="currentQuestion===(questionList.length-1)"class="btn" (click)="nextQuestion()"> <i class="fa text-primary fa-solid fa-chevron-right fa-3x"></i></button>      
               </div>  
        </ng-container> 
-       <ng-container>
+       <ng-container *ngIf="isQuizcompleted">
         <div class="row d-flex justify-content-between">
-            <img src="" alt="" class="src">
+            <img  class="img-fluid" style="width:50%;" src="assets/Celebrate.png" alt="">
+        <div class="result text-center col-md-6 col-sm-12">
+            <h3>Congratulations!!!<br> Results</h3>
+            <p>Total question : {{questionList.length}}</p>
+            <p>Total Correct Answers:{{correctAnswer}}</p>
+            <p>Total Score:{{points}}</p>
+        </div>
         </div>
        </ng-container>
         </div>
