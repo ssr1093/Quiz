@@ -31,7 +31,8 @@
               <div class="options">
     <ol *ngFor="let option of questionList[currentQuestion]?.options">
         <li (click)="Answer(currentQuestion+1,option)">
-            <div class="card">
+ 
+  <div appChangeBg [isCorrect]="option.correct" class="card">
                 {{option.text}}
             </div>     
         </li>
@@ -40,11 +41,13 @@
               <div class="d-flex justify-content-between">
                 <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"> <i class="fa text-primary fa-solid fa-chevron-left fa-3x"></i></button>
                 <button class="btn" (click)="resetQuiz()"><i class="fa fa-refresh text-primary fa-3x" ></i></button>
-                <button  [disabled]="(currentQuestion+1)===(questionList.length)"class="btn" (click)="nextQuestion()"> <i class="fa text-primary fa-solid fa-chevron-right fa-3x"></i></button>      
+                <button [disabled]="currentQuestion===(questionList.length-1)"class="btn" (click)="nextQuestion()"> <i class="fa text-primary fa-solid fa-chevron-right fa-3x"></i></button>      
               </div>  
        </ng-container> 
        <ng-container>
-        
+        <div class="row d-flex justify-content-between">
+            <img src="" alt="" class="src">
+        </div>
        </ng-container>
         </div>
 </div>
